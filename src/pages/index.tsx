@@ -32,34 +32,17 @@ export default function Home(messages: any) {
   console.log(messages)
  
   return (
-    <div className=''> 
-    <h1>{JSON.stringify(lessonlist[1].attributes.lesson_title)}</h1>
-    <h1 className='text-black-500 ml-10 text-xl'>{lessontitle}</h1>
-    <LessonSection/>
-    <div className='ml-96'><Audio info={messages5}/> </div>
-    <Text/>
-    <Video/>
-    {/* {messages2.map((info) => {
-      const image2 = info.attributes.image.data
-      const image3 = image2[0].attributes.url
-      console.log(image2.attributes)
-      return (  
-
-         <div><h1>{info.id}</h1>
-          <h1>{info.attributes.greetings}</h1> 
-         
-          
-          <Image  height={100} width={100} src={(image2[0].attributes.url)} />
-          <h1>{JSON.stringify(image3)}</h1>
-          </div>);
-    })} */}
-       <div className='w-100%'>
+    <div className='w-full text-center'> 
+    <h1 className='text-7xl'>Blockchain<span className='text-blue-500'>Basics</span></h1>
+    
+       <div className='w-100% m-4'>
         <Carousel className='w-full bg-slate-100' withIndicators >
     {lessonlist.map((i: any) => (
        <Carousel.Slide key={i} className='snap-center w-full bg-slate-100'>     
-          <h1>{i.attributes.lesson_title}</h1>
-          <Audio info={i.attributes.audio_Relation.data}/> 
-    
+          <h1 className='text-3xl m-2'>{i.attributes.lesson_title}</h1>
+          <Audio info={i.attributes.audio_Relation.data}/>     
+          <Video info={i.attributes.videos.data}/>     
+          <Text info={i.attributes.audio_Relation.data}/>     
          </Carousel.Slide> 
       
       ))}
