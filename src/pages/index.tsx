@@ -40,9 +40,17 @@ export default function Home(messages: any) {
     {lessonlist.map((i: any) => (
        <Carousel.Slide key={i} className='snap-center w-full bg-slate-100'>     
           <h1 className='text-3xl m-2'>{i.attributes.lesson_title}</h1>
-          <Audio info={i.attributes.audio_Relation.data}/>     
+          <div className='flex sd:flex-1 flex-row justify-around'>
+            <div>
+          <Text info={i.attributes.texts.data}/>  
+
+            </div>
+          <div>
+
           <Video info={i.attributes.videos.data}/>     
-          <Text info={i.attributes.audio_Relation.data}/>     
+          </div>
+            </div>   
+          <Audio info={i.attributes.audio_Relation.data}/>     
          </Carousel.Slide> 
       
       ))}
