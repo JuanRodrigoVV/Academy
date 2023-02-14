@@ -9,6 +9,7 @@ import LessonSection from '@/components/LessonSection'
 import Text from '@/components/Text'
 import Video from '@/components/Video'
 import { Carousel } from '@mantine/carousel'
+import { Header2 } from '@/components/Header'
 
 
 
@@ -30,19 +31,19 @@ export default function Home(messages: any) {
 
   const lessonlist = messages.messages.data
   console.log(messages)
- 
+  const links2 = [{link: "holas", label:"Home"}, {link: "holas", label:"Get Started"}, {link: "holas", label:"FAQs"} ]
   return (
    
 
-   
-    <div className='w-full text-center mb-4 bg-gradient-to-br  from-[#2c3e50] to-[#4ca1af]'> 
-    <h1 className='text-7xl text-white mt-2 font-extralight'>Blockchain<span className='text-blue-500 '>Basics</span></h1>
+    <div className='w-full text-center mb-4 bg-gradient-to-br bg-white'> 
+    <Header2 links={links2}/>
+    <h1 className='text-7xl text-black mt-[-100px] mb-8 font-extralight'>Blockchain<span className='text-blue-500 '>Basics</span></h1>
     
        <div className='w-100%  bg-gradient-to-br from-[#2c3e50] to-[#4ca1af] shadow-lg '>
-        <Carousel className='w-full ' withIndicators >
+        <Carousel className='w-full ' withIndicators withControls >
     {lessonlist.map((i: any) => (
-       <Carousel.Slide key={i} className='snap-center w-full bg-gradient border-none shadow-lg h-[1450px] from-red-900 to-gray-300'>     
-          <h1 className='text-3xl m-2 text-white font-extralight'>{i.attributes.lesson_title}</h1>
+       <Carousel.Slide key={i} className='snap-center w-full bg-gradient border-none shadow-lg h-[1750px] bg-gradient-to-br from-[#1f3140] to-[#374957]'>     
+          <h1 className='text-5xl m-2 text-white font-extralight mb-8 mt-8'>{i.attributes.lesson_title}</h1>
           <div className='flex sd:flex-1 flex-row justify-around'>
            
           <Text info={i.attributes.texts.data}/>  

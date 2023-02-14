@@ -4,16 +4,16 @@ import React from 'react'
 export default function Audio({info}: any) {    
 
   return (
-    <Carousel className='w-[500px]' withIndicators >
+    <Carousel className='w-[480px] shadow-xl' withIndicators >
         
     
        {info.map((i: any) => (
 
-        <Carousel.Slide key={i} className='snap-center w-[500px]  bg-slate-100 backdrop-blur-md bg-opacity-20 rounded-xl'>     
+        <Carousel.Slide key={i} className='snap-center w-[500px] justify-center  bg-slate-100 backdrop-blur-md bg-opacity-20 rounded-xl '>     
 
-          <h1 className='text-center mt-2 mb-2 text-white font-extralight text-xl'>{i.attributes.title}</h1>
+          <h1 className='text-center mt-8  text-white font-extralight text-xl'>{i.attributes.title}</h1>
           <div className='object-scale-down'>
-          <img className='h-[500px] w-[500px]'
+          <img className='rounded-xl m-8 h-[350px] w-[420px]'
       src={i.attributes.audio_image}      
       />
       </div>
