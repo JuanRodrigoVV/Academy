@@ -22,7 +22,7 @@ export default function Modal2({info} :any) {
       </Modal>
 
       {info.map((i: any) => (
-      <Group position="center">
+      <Group key={i} position="center">
         
       <div className='w-40 flex flex-col items-center text-center align-middle content-center'>
         
