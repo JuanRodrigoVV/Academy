@@ -5,7 +5,7 @@ export default function Modal({info} :any) {
   return (
    <>
     {info.map((i: any) => (
-      <div>  
+      <div key={i}>  
         <Modal3 info2={i.attributes}/>
       </div>
 ))}
