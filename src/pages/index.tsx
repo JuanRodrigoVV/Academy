@@ -32,25 +32,28 @@ export default function Home(messages: any) {
   console.log(messages)
  
   return (
-    <div className='w-full text-center'> 
-    <h1 className='text-7xl'>Blockchain<span className='text-blue-500'>Basics</span></h1>
+   
+
+   
+    <div className='w-full text-center mb-4 bg-gradient-to-br  from-[#2c3e50] to-[#4ca1af]'> 
+    <h1 className='text-7xl text-white mt-2 font-extralight'>Blockchain<span className='text-blue-500 '>Basics</span></h1>
     
-       <div className='w-100% m-4'>
-        <Carousel className='w-full bg-slate-100' withIndicators >
+       <div className='w-100%  bg-gradient-to-br from-[#2c3e50] to-[#4ca1af] shadow-lg '>
+        <Carousel className='w-full ' withIndicators >
     {lessonlist.map((i: any) => (
-       <Carousel.Slide key={i} className='snap-center w-full bg-slate-100'>     
-          <h1 className='text-3xl m-2'>{i.attributes.lesson_title}</h1>
+       <Carousel.Slide key={i} className='snap-center w-full bg-gradient border-none shadow-lg h-[1450px] from-red-900 to-gray-300'>     
+          <h1 className='text-3xl m-2 text-white font-extralight'>{i.attributes.lesson_title}</h1>
           <div className='flex sd:flex-1 flex-row justify-around'>
-            <div>
+           
           <Text info={i.attributes.texts.data}/>  
 
-            </div>
-          <div>
+            
+          <div className='rounded-xl'>
 
           <Video info={i.attributes.videos.data}/>     
           </div>
             </div>  
-            <div className='ml-[900px] relative mt-[-500px]'>
+            <div className='ml-[900px] relative mt-[-650px]'>
           <Audio info={i.attributes.audio_Relation.data}/>     
               </div> 
          </Carousel.Slide> 
@@ -59,7 +62,8 @@ export default function Home(messages: any) {
     </Carousel>
       </div>
     
-    </div> 
+    </div>
+  
   )
 }
 export async function getStaticProps() {
