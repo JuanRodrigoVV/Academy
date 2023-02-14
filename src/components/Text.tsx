@@ -16,8 +16,8 @@ export default function Text({info}: any) {
             <div className='h-[350px] overflow-auto'>
               <p>{i.attributes.text_content}</p>
             </div>
-            {/* <Modal info={i.attributes.modals.data[0].attributes}/> */}
-            <Modal2 info={i.attributes.modals.data[0].attributes}/>
+           <Modal info={i.attributes.modals.data}/> 
+            {/* <Modal2 info={i.attributes.modals.data}/> */}
 
         </Carousel.Slide> 
       ))}

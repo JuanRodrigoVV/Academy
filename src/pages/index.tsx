@@ -49,8 +49,10 @@ export default function Home(messages: any) {
 
           <Video info={i.attributes.videos.data}/>     
           </div>
-            </div>   
+            </div>  
+            <div className='ml-[900px] relative mt-[-500px]'>
           <Audio info={i.attributes.audio_Relation.data}/>     
+              </div> 
          </Carousel.Slide> 
       
       ))}
