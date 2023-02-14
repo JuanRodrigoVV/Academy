@@ -78,7 +78,7 @@ export async function getStaticProps() {
   
   const client = new ApolloClient({
     // link: (httpLink),
-    uri: 'https://strapi-production-79fd.up.railway.app/graphql/',
+    uri: process.env.STRAPI_GRAPHQL_API,
     cache: new InMemoryCache(),
   })
 
