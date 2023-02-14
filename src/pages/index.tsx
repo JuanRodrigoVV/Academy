@@ -68,7 +68,7 @@ export default function Home(messages: any) {
   
   )
 }
-export async function getStaticProps() {
+export async function getServerSideProps() {
   
   const httpLink = createHttpLink({
     uri: process.env.STRAPI_GRAPHQL_API,
