@@ -9,9 +9,11 @@ export default function Audio({info}: any) {
     
        {info.map((i: any) => (
 
-        <Carousel.Slide key={i} className='snap-center w-[500px] justify-center  bg-slate-100 backdrop-blur-md bg-opacity-20 rounded-xl '>     
-
+        <Carousel.Slide key={i} className='snap-center w-[450px] justify-center  bg-slate-100 backdrop-blur-md bg-opacity-10 rounded-xl '>     
+         <div className='h-8'>
           <h1 className='text-center mt-8  text-white font-extralight text-xl'>{i.attributes.title}</h1>
+
+         </div>
           <div className='object-scale-down'>
           <img className='rounded-xl m-8 h-[350px] w-[420px]'
       src={i.attributes.audio_image}      

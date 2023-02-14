@@ -11,10 +11,12 @@ export default function Text({info}: any) {
        {info.map((i: any) => (
 
         <Carousel.Slide key={i} className='w-[700px] bg-slate-100 backdrop-blur-md bg-opacity-20 rounded-2xl'>     
-            <img className='w-[700px] h-[400px]'src={i.attributes.text_image}/>
-            <h1 className='text-xl m-2 text-white font-light'>{i.attributes.title}</h1>
+            <div className='w-[700px] flex flex-col justify-center h-[400px] items-center'>
+              <img className='w-[400px] h-[380px] rounded-xl animate-wiggle 'src={i.attributes.text_image}/>
+              </div>
+            <h1 className='text-3xl m-2 text-white font-light'>{i.attributes.title}</h1>
             <div className='h-[350px] overflow-auto'>
-              <p className='m-2 text-white font-extralight'>{i.attributes.text_content}</p>
+              <p className='m-6 text-white font-extralight text-justify'>{i.attributes.text_content}</p>
             </div>
               <Modal info={i.attributes.modals.data}/> 
            
